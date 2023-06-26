@@ -1,0 +1,58 @@
+#include <windows.h>
+// #include <ver.h>
+
+1 VERSIONINFO LOADONCALL MOVEABLE
+FILEVERSION 1, 0
+PRODUCTVERSION 1, 0
+FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+FILEFLAGS	  0
+FILEOS	 VOS_NT
+FILETYPE VFT_APP
+FILESUBTYPE	  0
+BEGIN
+	BLOCK "VarFileInfo"
+	BEGIN 
+		VALUE "Translation", 0x409, 1252
+	END
+        BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "040904E4"
+		BEGIN
+			VALUE "CompanyName", "dast\000"
+			VALUE "FileDescription", "Hangman Game\000"
+			VALUE "FileVersion", "1.01\000"
+			VALUE "InternalName", "HANGMAN\000"
+			VALUE "LegalCopyright", "Copyright \251 dast 2002-2023\000"
+			VALUE "LegalTrademarks", "\000"
+			VALUE "OriginalFilename", "HANGMAN.EXE\000"
+			VALUE "ProductName", "DAST GAME\000"
+			VALUE "ProductVersion", "1.00\000"
+		END
+
+	END
+
+END
+
+HANGMAN 	ICON HANGMAN.ICO
+
+GALG00		BITMAP bmp\galg00.bmp
+GALG01          BITMAP bmp\galg01.bmp
+GALG02		BITMAP bmp\galg02.bmp
+GALG03		BITMAP bmp\galg03.bmp
+GALG04		BITMAP bmp\galg04.bmp
+GALG05		BITMAP bmp\galg05.bmp
+GALG06		BITMAP bmp\galg06.bmp
+GALG07		BITMAP bmp\galg07.bmp
+GALG08		BITMAP bmp\galg08.bmp
+GALG09		BITMAP bmp\galg09.bmp
+GALG10		BITMAP bmp\galg10.bmp
+GALG11		BITMAP bmp\galg11.bmp
+POKAL		BITMAP bmp\pokal.bmp
+
+OHOHH		WAVE DISCARDABLE bmp\ohohh.wav
+APPLAUS 	WAVE DISCARDABLE bmp\applaus.wav
+INIT		WAVE DISCARDABLE bmp\init.wav
+PRESS		WAVE DISCARDABLE bmp\press.wav
+LOST		WAVE DISCARDABLE bmp\lost.wav
+BLOB		WAVE DISCARDABLE bmp\blob.wav
+

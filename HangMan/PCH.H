@@ -1,0 +1,29 @@
+#include <winsock2.h>
+#include <windows.h>
+#include <winbase.h>
+#include <mmsystem.h>
+#include <winnt.h>
+#include <stdio.h>
+#include <memory.h>
+// #include <version.h>
+#include <process.h>
+#include <direct.h>
+#include <io.h>
+#include <stdlib.h>
+#include <string.h>
+#include <fcntl.h>
+#include <dos.h>
+#include <ctype.h>
+#include <time.h>
+#include <share.h>
+#include <conio.h>
+#include <winerror.h>
+#include <winnetwk.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <lm.h>
+#include <ole2.h>
+#include <shellapi.h>
+#include <shlguid.h>
+#include <shlobj.h>
+
