@@ -1,8 +1,9 @@
 #include "pch.h"
 #include "worte.h"
+#include "hangman.h"
 
 WORD PRGNAME[] = L"HANGMAN";
-WORD VERSION[] = L"2.00 dast 23.06.2023";
+WORD VERSION[] = L"2.10 dast 05.10.2025";
 
 #define IDM_TIMER   WM_USER+8000
 #define MAXGALG 11
@@ -72,7 +73,7 @@ LPSTR MyErrString(int le)
 		(LPTSTR)&em, 0, NULL);
 	if (!ret)
 	{
-		sprintf_s(ErrMess, sizeof(ErrMess), "Error %u", le);
+		sprintf_s(ErrMess, countW(ErrMess), "Error %u", le);
 	}
 	else
 	{
@@ -254,7 +255,7 @@ void GalgenAt(HWND hwnd, HDC hdc)
 
 	if ((Galgen < 0) || (Galgen > MAXGALG) || (Sieg)) Galgen = 0;
 	if (Sieg) lstrcpy(hlp, (wchar_t*)L"pokal");
-	else swprintf_s(hlp, sizeof(hlp), (wchar_t*)L"GALG%02u", Galgen);
+	else swprintf_s(hlp, countW(hlp), (wchar_t*)L"GALG%02u", Galgen);
 
 	hdcs = CreateDC((wchar_t*)L"DISPLAY", NULL, NULL, NULL);
 	hdcmem = CreateCompatibleDC(hdcs);
@@ -469,9 +470,9 @@ void Paintit(HWND hwnd, HDC hdc)
 	if (Versuch)
 	{
 		if ((!Sieg) && (Galgen < MAXGALG))
-			swprintf_s(hlp, sizeof(hlp), L"%u. Versuch,  %u Fehler", Versuch, Fehler);
+			swprintf_s(hlp, countW(hlp), L"%u. Versuch,  %u Fehler", Versuch, Fehler);
 		else
-			swprintf_s(hlp, sizeof(hlp), (Versuch == 1)
+			swprintf_s(hlp, countW(hlp), (Versuch == 1)
 				? L"%u Versuch,  %u Fehler"
 				: L"%u Versuche,  %u Fehler",
 				Versuch, Fehler);

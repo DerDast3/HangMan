@@ -3,3 +3,16 @@
 ################################################################################
 
 /.vs
+*.exe
+*.obj
+*.iobj
+*.res
+*.tlog
+*.log
+*.pdb
+*.ipdb
+*-sign.out
+*.ilk
+*.vcxproj.user
+Release/
+Debug/
